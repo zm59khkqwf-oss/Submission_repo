@@ -105,6 +105,7 @@ This extension introduces a tradeoff: the dashboard query is no longer a single 
 
 
 
+<br>
 
 
 
@@ -143,6 +144,7 @@ Including the `event_timestamp` as a secondary clustering key improves locality 
 
 #### Sensor-Based Partitioning
 Partitioning directly on `sensor_id` would be inappropriate for this case example. Sensor identifiers have very high cardinality, which would create too many partitions, and introduce operational overhead without providing meaningful pruning benefits. Partitioning is better suited to time dimensions, while clustering is the correct mechanism for optimizing reads on high-cardinality identifiers like `sensor_id`.
+
 
 
 
