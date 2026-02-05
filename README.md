@@ -1,4 +1,4 @@
-# Medical IoT Data Pipeline - End-to-End Execution Flow
+# Medical IoT Data Pipeline | End-to-End Execution Flow
 
 The assessment is organized into modular components that define a real data pipeline. Each part can run independently, but together they represent the flow from raw ingestion to model lifecycle automation.
 
@@ -157,6 +157,7 @@ The JSON file is the compiled pipeline specification required for submission.
 ```text
 BigQuery → Extract → Train → Register → Deploy
 ```
+
 
 
 
