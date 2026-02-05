@@ -156,6 +156,7 @@ The ingestion layer prioritizes data integrity over completeness, ensuring that 
 
 ---
 
+<br>
 
 ## Vertex AI — ML Pipeline (Part D)
 
@@ -218,6 +219,7 @@ BigQuery (clean vitals/features)
                   └──── Continue ─── Rollout ─→ Deploy
 
 ```
+
 
 
 
