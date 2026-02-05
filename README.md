@@ -17,6 +17,8 @@ Sequence: **ingest → store → analyze → operationalize**.
 
 
 
+
+
 ## Part A — Ingestion & Cleaning (`code/ingest.py`)
 
 ### What it does
@@ -46,6 +48,7 @@ JSONL file with one cleaned event per line:
 ```json
 {"event_timestamp":"2026-01-27T13:50:50.771629Z","sensor_id":"icu-monitor-004","heart_rate":70.5,"body_temperature":37.07,"spO2":97,"battery_level":41}
 ```
+<br>
 
 
 ## Part B — Bigtable Loader (Local Emulator)
@@ -93,6 +96,7 @@ python code/bigtable_load.py
 This confirms emulator connection, schema creation, and successful data ingestion.
 
 
+<br>
 
 
 ## Part C — BigQuery Analytics (`sql/analytical_query.sql`)
@@ -103,6 +107,7 @@ Keeping analytics in BigQuery allows large-scale queries and model preparation w
 
 The cleaned dataset (`data/vitals_clean.jsonl`) was uploaded into a BigQuery Sandbox table using the Google Cloud Console. The SQL query in `sql/analytical_query.sql` was executed and validated directly in the BigQuery editor to confirm correct behavior and results.
 
+<br>
 
 
 ## Part D — Vertex AI MLOps Pipeline (`code/vertex_pipeline.py`)
@@ -157,6 +162,7 @@ The JSON file is the compiled pipeline specification required for submission.
 ```text
 BigQuery → Extract → Train → Register → Deploy
 ```
+
 
 
 
