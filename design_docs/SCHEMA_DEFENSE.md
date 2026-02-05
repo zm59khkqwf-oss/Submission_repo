@@ -18,6 +18,7 @@ The schema prioritizes:
 ## Row Key Strategy
 
 ### Implemented Row Key
+`sensor_id#reverse_timestamp`
 
 
 Bigtable stores rows lexicographically by row key. The structure is designed to align physical storage with the dominant dashboard access pattern.
@@ -142,6 +143,7 @@ Including the `event_timestamp` as a secondary clustering key improves locality 
 
 #### Sensor-Based Partitioning
 Partitioning directly on `sensor_id` would be inappropriate for this case example. Sensor identifiers have very high cardinality, which would create too many partitions, and introduce operational overhead without providing meaningful pruning benefits. Partitioning is better suited to time dimensions, while clustering is the correct mechanism for optimizing reads on high-cardinality identifiers like `sensor_id`.
+
 
 
 
