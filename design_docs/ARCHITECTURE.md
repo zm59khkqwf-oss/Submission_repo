@@ -154,7 +154,7 @@ impute it? What are the clinical risks of your choice?"**
 Null heart rate values are dropped at ingestion rather than imputed. Heart rate is a primary clinical signal used in alerting and clinical monitoring, and synthesizing a value without temporal or clinical context would introduce false certainty into later monitoring and analytics. This could mask sensor failures or true patient deterioration, creating misleading trends or alerts.
 The ingestion layer prioritizes data integrity over completeness, ensuring that only confirmed physiological measurements enter the system. Any imputation is intentionally deferred to workflows where uncertainty can be modeled explicitly.
 
----
+
 
 <br>
 
@@ -219,6 +219,7 @@ BigQuery (clean vitals/features)
                   └──── Continue ─── Rollout ─→ Deploy
 
 ```
+
 
 
 
