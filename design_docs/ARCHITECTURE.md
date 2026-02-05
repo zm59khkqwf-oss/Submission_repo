@@ -147,7 +147,7 @@ SpO₂ and battery level are forwarded without strict validation. These fields a
 
 ---
 
-
+## Prompt 
 **"If a heart rate is null, why did you choose to drop the row versus
 impute it? What are the clinical risks of your choice?"**
 
@@ -218,6 +218,7 @@ BigQuery (clean vitals/features)
                   └──── Continue ─── Rollout ─→ Deploy
 
 ```
+
 
 
 
